@@ -17,6 +17,7 @@
 		<java.version>17</java.version>
 		<bouncycastle.version>1.77</bouncycastle.version>
 		<jsonwebtoken.version>0.12.3</jsonwebtoken.version>
+		<mapstruct.version>1.5.5.Final</mapstruct.version>
 	</properties>
 	<dependencies>
 
@@ -114,6 +115,12 @@
 			<version>${jsonwebtoken.version}</version>
 		</dependency>
 		<!-- JWT DEPENDENCIES -->
+
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>${mapstruct.version}</version>
+		</dependency>
 
 	</dependencies>
 
