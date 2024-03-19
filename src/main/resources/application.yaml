@@ -6,6 +6,7 @@ spring:
   config:
     import: optional:file:.env[.properties]
   datasource:
+    name: mysql
     url: jdbc:mysql://${SECURITY_DB_IP:localhost}:${SECURITY_DB_PORT:3306}/springbootsecurityexample
     username: ${DATABASE_USERNAME:root}
     password: ${DATABASE_PASSWORD:password}
