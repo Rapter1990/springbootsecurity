@@ -171,8 +171,8 @@ class AdminAuthControllerTest extends AbstractRestControllerTest {
 
         // Given
         TokenInvalidateRequest tokenInvalidateRequest = TokenInvalidateRequest.builder()
-                .accessToken("mockAccessToken")
-                .refreshToken("mockRefreshToken")
+                .accessToken("Bearer " + mockAdminToken.getAccessToken())
+                .refreshToken(mockAdminToken.getRefreshToken())
                 .build();
 
         // When
@@ -181,7 +181,7 @@ class AdminAuthControllerTest extends AbstractRestControllerTest {
         // When
         mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/authentication/admin/logout")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .header(HttpHeaders.AUTHORIZATION, mockAdminToken)
+                        .header(HttpHeaders.AUTHORIZATION, "Bearer " + mockAdminToken.getAccessToken())
                         .content(objectMapper.writeValueAsString(tokenInvalidateRequest)))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
