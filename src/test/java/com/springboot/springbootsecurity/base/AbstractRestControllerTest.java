@@ -1,9 +1,11 @@
 package com.springboot.springbootsecurity.base;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.springboot.springbootsecurity.auth.config.TokenConfigurationParameter;
 import com.springboot.springbootsecurity.auth.model.Token;
 import com.springboot.springbootsecurity.auth.model.enums.TokenClaims;
 import com.springboot.springbootsecurity.builder.AdminEntityBuilder;
+import com.springboot.springbootsecurity.builder.UserEntityBuilder;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import org.apache.commons.lang3.time.DateUtils;
@@ -29,6 +31,9 @@ public class AbstractRestControllerTest extends AbstractTestContainerConfigurati
     @Autowired
     protected MockMvc mockMvc;
 
+    @Autowired
+    protected ObjectMapper objectMapper;
+
     protected Token mockAdminToken;
 
     protected Token mockUserToken;
@@ -42,7 +47,7 @@ public class AbstractRestControllerTest extends AbstractTestContainerConfigurati
 
         this.tokenConfiguration = new TokenConfigurationParameter();
         this.mockAdminToken = this.generate(new AdminEntityBuilder().withValidFields().build().getClaims());
-        //this.mockUserToken = this.generate(new UserEntityBuilder().build().getClaims());
+        this.mockUserToken = this.generate(new UserEntityBuilder().withValidFields().build().getClaims());
 
     }
 
