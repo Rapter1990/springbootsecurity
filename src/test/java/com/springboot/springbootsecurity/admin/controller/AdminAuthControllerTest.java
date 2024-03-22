@@ -1,6 +1,5 @@
 package com.springboot.springbootsecurity.admin.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.springboot.springbootsecurity.admin.model.Admin;
 import com.springboot.springbootsecurity.admin.model.dto.request.AdminRegisterRequest;
 import com.springboot.springbootsecurity.admin.service.AdminLoginService;
@@ -16,30 +15,19 @@ import com.springboot.springbootsecurity.auth.model.mapper.TokenToTokenResponseM
 import com.springboot.springbootsecurity.base.AbstractRestControllerTest;
 import com.springboot.springbootsecurity.common.model.dto.response.CustomResponse;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
 import java.util.UUID;
 
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.hasValue;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 class AdminAuthControllerTest extends AbstractRestControllerTest {
-
-    @Autowired
-    protected ObjectMapper objectMapper;
 
     @MockBean
     private AdminRegisterService adminRegisterService;
@@ -94,7 +82,7 @@ class AdminAuthControllerTest extends AbstractRestControllerTest {
     }
 
     @Test
-    void loginAdmin() throws Exception {
+    void givenLoginRequest_WhenLoginForAdmin_ThenReturnToken() throws Exception {
 
         // Given
         LoginRequest loginRequest = LoginRequest.builder()
@@ -132,7 +120,7 @@ class AdminAuthControllerTest extends AbstractRestControllerTest {
 
 
     @Test
-    void refreshToken() throws Exception {
+    void givenTokenRefreshRequest_WhenRefreshTokenForAdmin_ThenReturnTokenResponse() throws Exception {
 
         // Given
         TokenRefreshRequest tokenRefreshRequest = new TokenRefreshRequest("refreshToken");
@@ -167,7 +155,7 @@ class AdminAuthControllerTest extends AbstractRestControllerTest {
 
 
     @Test
-    void logout() throws Exception {
+    void givenTokenInvalidateRequest_WhenLogoutForAdmin_ThenReturnInvalidateToken() throws Exception {
 
         // Given
         TokenInvalidateRequest tokenInvalidateRequest = TokenInvalidateRequest.builder()
