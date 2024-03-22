@@ -38,7 +38,7 @@ class AdminRegisterServiceImplTest extends AbstractBaseServiceTest {
     void givenAdminRegisterRequest_whenRegisterAdmin_thenReturnAdmin() {
 
         // Given
-        AdminRegisterRequest request = AdminRegisterRequest.builder()
+        final AdminRegisterRequest request = AdminRegisterRequest.builder()
                 .email("test@example.com")
                 .password("password123")
                 .firstName("John")
@@ -46,11 +46,11 @@ class AdminRegisterServiceImplTest extends AbstractBaseServiceTest {
                 .phoneNumber("1234567890")
                 .build();
 
-        String encodedPassword = "encodedPassword";
+        final String encodedPassword = "encodedPassword";
 
-        AdminEntity adminEntity = adminRegisterRequestToAdminEntityMapper.mapForSaving(request);
+        final AdminEntity adminEntity = adminRegisterRequestToAdminEntityMapper.mapForSaving(request);
 
-        Admin expected = adminEntityToAdminMapper.map(adminEntity);
+        final Admin expected = adminEntityToAdminMapper.map(adminEntity);
 
         // When
         when(adminRepository.existsAdminEntityByEmail(request.getEmail())).thenReturn(false);
@@ -75,7 +75,7 @@ class AdminRegisterServiceImplTest extends AbstractBaseServiceTest {
     void givenAdminRegisterRequest_whenEmailAlreadyExists_thenThrowAdminAlreadyExistException() {
 
         // Given
-        AdminRegisterRequest request = AdminRegisterRequest.builder()
+        final AdminRegisterRequest request = AdminRegisterRequest.builder()
                 .email("existing@example.com")
                 .password("password123")
                 .firstName("Jane")

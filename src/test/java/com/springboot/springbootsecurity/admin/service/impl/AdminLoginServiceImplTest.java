@@ -37,14 +37,14 @@ class AdminLoginServiceImplTest extends AbstractBaseServiceTest {
     void login_ValidCredentials_ReturnsToken() {
 
         // Given
-        LoginRequest loginRequest = LoginRequest.builder()
+        final LoginRequest loginRequest = LoginRequest.builder()
                 .email("test@example.com")
                 .password("password123")
                 .build();
 
-        AdminEntity adminEntity = new AdminEntityBuilder().withValidFields().build();
+        final AdminEntity adminEntity = new AdminEntityBuilder().withValidFields().build();
 
-        Token expectedToken = Token.builder()
+        final Token expectedToken = Token.builder()
                 .accessToken("mockAccessToken")
                 .accessTokenExpiresAt(123456789L)
                 .refreshToken("mockRefreshToken")
@@ -77,7 +77,7 @@ class AdminLoginServiceImplTest extends AbstractBaseServiceTest {
     void login_InvalidEmail_ThrowsAdminNotFoundException() {
 
         // Given
-        LoginRequest loginRequest = LoginRequest.builder()
+        final LoginRequest loginRequest = LoginRequest.builder()
                 .email("nonexistent@example.com")
                 .password("password123")
                 .build();
@@ -102,12 +102,12 @@ class AdminLoginServiceImplTest extends AbstractBaseServiceTest {
     void login_InvalidPassword_ThrowsPasswordNotValidException() {
 
         // Given
-        LoginRequest loginRequest = LoginRequest.builder()
+        final LoginRequest loginRequest = LoginRequest.builder()
                 .email("test@example.com")
                 .password("invalidPassword")
                 .build();
 
-        AdminEntity adminEntity = AdminEntity.builder()
+        final AdminEntity adminEntity = AdminEntity.builder()
                 .email(loginRequest.getEmail())
                 .password("encodedPassword")
                 .build();
