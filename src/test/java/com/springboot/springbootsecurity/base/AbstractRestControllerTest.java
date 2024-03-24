@@ -24,7 +24,6 @@ import java.util.Map;
 import java.util.UUID;
 
 @SpringBootTest
-@ExtendWith(MockitoExtension.class)
 @AutoConfigureMockMvc
 public class AbstractRestControllerTest extends AbstractTestContainerConfiguration {
 
