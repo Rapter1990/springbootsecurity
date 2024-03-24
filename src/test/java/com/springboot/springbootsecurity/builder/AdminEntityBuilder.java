@@ -16,8 +16,8 @@ public class AdminEntityBuilder extends BaseBuilder<AdminEntity> {
     public AdminEntityBuilder withValidFields() {
         return this
                 .withId(UUID.randomUUID().toString())
-                .withEmail("example@example.com")
-                .withPassword("password")
+                .withEmail("adminexample@example.com")
+                .withPassword("adminpassword")
                 .withFirstName("John")
                 .withLastName("Doe")
                 .withPhoneNumber("1234567890")

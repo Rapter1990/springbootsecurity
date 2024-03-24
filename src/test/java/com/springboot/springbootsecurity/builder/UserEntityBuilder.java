@@ -16,8 +16,8 @@ public class UserEntityBuilder extends BaseBuilder<UserEntity> {
     public UserEntityBuilder withValidFields() {
         return this
                 .withId(UUID.randomUUID().toString())
-                .withEmail("example@example.com")
-                .withPassword("password")
+                .withEmail("userexample@example.com")
+                .withPassword("userpassword")
                 .withFirstName("John")
                 .withLastName("Doe")
                 .withPhoneNumber("1234567890")
