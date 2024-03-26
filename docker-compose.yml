@@ -1,6 +1,7 @@
 version: "3.9"
 
 services:
+
   database:
     container_name: database
     image: mysql:8.0.33
@@ -18,7 +19,7 @@ services:
     ports:
       - "3307:3306"
     networks:
-      - parkinglotNetwork
+      - springbootsecurityexampleNetwork
 
   springbootsecurity:
     image: 'springbootsecurity:latest'
