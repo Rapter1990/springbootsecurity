@@ -18,10 +18,10 @@ FROM openjdk:17-jdk-slim
 WORKDIR springbootsecurity
 
 # Copy the JAR file from the build stage
-COPY --from=build target/*.jar springbootsecurity.jar
+COPY --from=build target/*.jar springbootsecurityexample.jar
 
 # Expose port 1223
 EXPOSE 1223
 
 # Set the entrypoint command for running the application
-ENTRYPOINT ["java", "-jar", "springbootsecurity.jar"]
+ENTRYPOINT ["java", "-jar", "springbootsecurityexample.jar"]

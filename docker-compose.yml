@@ -21,8 +21,8 @@ services:
     networks:
       - springbootsecurityexampleNetwork
 
-  springbootsecurity:
-    image: 'springbootsecurity:latest'
+  springbootsecurityexample:
+    image: 'springbootsecurityexample:latest'
     build:
       context: .
       dockerfile: Dockerfile
