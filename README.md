@@ -208,7 +208,35 @@ $ mvn spring-boot:run
 <details>
 <summary>Click here to show the screenshots of project</summary>
     <p> Figure 1 </p>
-    <img src ="screenshots/1.PNG">
-    <p> Figure 1 </p>
-    <img src ="screenshots/2.PNG">
+    <img src ="screenshots/spring_1.PNG">
+    <p> Figure 2 </p>
+    <img src ="screenshots/spring_2.PNG">
+    <p> Figure 3 </p>
+    <img src ="screenshots/spring_3.PNG">
+    <p> Figure 4 </p>
+    <img src ="screenshots/spring_4.PNG">
+    <p> Figure 5 </p>
+    <img src ="screenshots/spring_5.PNG">
+    <p> Figure 6 </p>
+    <img src ="screenshots/spring_6.PNG">
+    <p> Figure 7 </p>
+    <img src ="screenshots/spring_7.PNG">
+    <p> Figure 8 </p>
+    <img src ="screenshots/spring_8.PNG">
+    <p> Figure 9 </p>
+    <img src ="screenshots/spring_9.PNG">
+    <p> Figure 10 </p>
+    <img src ="screenshots/spring_10.PNG">
+    <p> Figure 11 </p>
+    <img src ="screenshots/spring_11.PNG">
+    <p> Figure 12 </p>
+    <img src ="screenshots/spring_12.PNG">
+    <p> Figure 13 </p>
+    <img src ="screenshots/spring_13.PNG">
+    <p> Figure 14 </p>
+    <img src ="screenshots/spring_14.PNG">
+    <p> Figure 15 </p>
+    <img src ="screenshots/spring_15.PNG">
+    <p> Figure 16 </p>
+    <img src ="screenshots/spring_16.PNG">
 </details>
