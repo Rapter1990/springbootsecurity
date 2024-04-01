@@ -139,7 +139,7 @@
       <td>DELETE</td>
       <td>/api/v1/products/{productId}</td>
       <td>Delete Product By Id</td>
-      <td>ProductUpdateRequest</td>
+      <td></td>
       <td></td>
       <td>ProductId</td>
       <td></td>
