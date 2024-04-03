@@ -109,7 +109,7 @@
       <td></td>
   <tr>
   <tr>
-      <td>POST</td>
+      <td>GET</td>
       <td>/api/v1/products/{productId}</td>
       <td>Get Product By Id</td>
       <td></td>
@@ -121,7 +121,7 @@
       <td>GET</td>
       <td>/api/v1/products</td>
       <td>Get Products</td>
-      <td></td>
+      <td>ProductPagingRequest</td>
       <td></td>
       <td></td>
       <td></td>
